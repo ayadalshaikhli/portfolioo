@@ -86,15 +86,7 @@ function Gsap() {
       </div>
 
       <header>
-        <a href="https://greensock.com/scrolltrigger">
-          <img
-            className="greensock-icon"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg"
-            width="200"
-            height="64"
-            alt="GSAP"
-          />
-        </a>
+
       </header>
     </>
   );
