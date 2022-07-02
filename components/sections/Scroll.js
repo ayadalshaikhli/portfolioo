@@ -257,7 +257,7 @@ function Scroll() {
               </div>
             </section>
           </Tween>
-          <Tween from={{ x: "100%" }} to={{ x: "0" }}>
+          <Tween delay={-4.0} from={{ x: "100%" }} to={{ x: "0" }}>
             <section className="z-50 panel bg-black">
               <Tween from={{ y: "75%" }} to={{ y: "5%" }}>
                 <section className="panel text-center  text-white bg-black z-10">
