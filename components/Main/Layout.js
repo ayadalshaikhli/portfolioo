@@ -49,6 +49,13 @@ import Nav from './Nav'
         background-color: #953543;
       }
 
+      .bord{
+        border: 1px solid #fff;
+      }
+      .bord-project{
+        border: 1px solid #fff;
+      }
+
      
        
         

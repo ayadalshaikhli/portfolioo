@@ -45,7 +45,7 @@ function Scroll() {
     <Controller>
       <Scene triggerHook="onLeave" duration="400%" pin={true}>
         <Timeline wrapper={<div id="pinContainer" />}>
-          <Hero />
+          {/* <Hero /> */}
           <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
             <section className="panel text-center pt-10 text-white">
               <span className="text-7xl ">
@@ -76,7 +76,7 @@ function Scroll() {
             >
               <div
                 ref={about}
-                className="pin h-full w-12 absolute text-6xl border-x-2 px-9 border-white flex flex-col justify-between  uppercase "
+                className="bord h-full w-12 absolute text-6xl  px-10  flex flex-col justify-between  uppercase "
               >
                 <div className="mt-20 -rotate-90">3</div>
                 <div className="mb-20 -rotate-90">About</div>
@@ -101,11 +101,11 @@ function Scroll() {
               </div>
             </section>
           </Tween>
-          <Tween from={{ x: "100%" }} to={{ x: "5%" }}>
-            <section className="exp panel border-l-2 border-white  bg-black text-white pt-10 z-30 flex ">
+          <Tween from={{ x: "100%" }} to={{ x: "4.4%" }}>
+            <section className="exp panel  bg-black text-white pt-10 z-30 flex overflow-hidden">
               <div
                 ref={about}
-                className="pin h-full w-12 border-r-2 absolute text-6xl px-9 flex flex-col justify-between ml-2 uppercase "
+                className="bord h-full w-12  absolute text-6xl px-10 flex flex-col justify-between  uppercase "
               >
                 <div className="mt-20 -rotate-90 mr-4">4</div>
                 <div className="mb-20 -rotate-90 mr-4">Experiance</div>
@@ -238,13 +238,48 @@ function Scroll() {
               </div>
             </section>
           </Tween>
-          <Tween from={{ x: "100%" }} to={{ x: "10.7%" }}>
-            <section className="panel bg-black pt-10 z-40 text-white border-l-2">
+          <Tween from={{ x: "100%" }} to={{ x: "8.7%" }}>
+            <section className="panel bg-black pt-10 z-40 text-white border-l-2 overflow-hidden">
               <h1 className="a absolute top-3/4 left-1/4 z-50 text-9xl overflow-hidden">
                 Teatro
               </h1>
               <div>
                 <Project />
+              </div>
+            </section>
+          </Tween>
+          <Tween from={{ x: "100%" }} to={{ x: "0" }}>
+            <section className="panel bg-black z-50 pt-10 text-white">
+              <div className="a uppercase font-bold text-left pl-20 text-8xl">
+                Selected Projects
+              </div>
+              <div className="flex flex-row justify-around border-t-2 border-b-2 text-xl  p-3">
+                <div className="a">Project</div>
+                <div className="flex mr-96">
+                  <h1 className="pr-10">Year</h1>
+                  <h1>Discipline</h1>
+                </div>
+                <div className="">Explore</div>
+              </div>
+              <div className="don">
+                <div className="bg-red-600 bon-1  w-full  absolute bottom-44 h-96   z-50">
+                  h
+                </div>
+                <div className="bg-red-500 bon-2  w-full  absolute bottom-32 h-96   z-40">
+                  h
+                </div>
+                <div className="bg-red-400 bon w-full  absolute bottom-20 h-96  z-30">
+                  h
+                </div>
+                <div className="bg-red-300 bon w-full absolute bottom-10 h-96 z-20">
+                  h
+                </div>
+                <div className="bg-red-200 bon w-full absolute bottom-0 h-96 z-10">
+                  h
+                </div>
+                <div className="bg-red-100 bon w-full absolute bottom-0 h-96 z-0">
+                  h
+                </div>
               </div>
             </section>
           </Tween>

@@ -8,8 +8,9 @@ export default function Nav() {
     <header
       style={{
         borderBottom: "1px solid rgb(212, 212, 212)",
+        zIndex: "1000",
       }}
-      className="flex fixed top-0 justify-between w-full border-2    p-2 text-lg z-10 text-white bg-black"
+      className="flex fixed top-0 justify-between w-full border-2    p-2 text-lg  text-white bg-black"
     >
       <div className="logo uppercase">AYAD AL SHAIKHLI</div>
       <div className="hidden time md:flex flex-row text-lg">

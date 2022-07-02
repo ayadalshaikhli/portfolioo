@@ -10,6 +10,7 @@ import Hero from "../components/three/Hero";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SectionWipes2 from "../components/sections/SectionWipes2";
 import Scroll from "../components/sections/Scroll";
+import Work from "../components/sections/Work";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
@@ -81,6 +82,7 @@ export default function Home() {
       </Head>
 
       <Scroll />
+      <Work />
     </div>
   );
 }
