@@ -31,6 +31,19 @@ import Nav from './Nav'
         position: absolute;
         text-align: center;
       }
+      #pinContainer .panel2 {
+        height: 50vh;
+        width: 100vw;
+        position: absolute;
+        text-align: center;
+      }
+      #pinContainer .panel3 {
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        position: absolute;
+        text-align: center;
+      }
 
       
       .panel.blue {

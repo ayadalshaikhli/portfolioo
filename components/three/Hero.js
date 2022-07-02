@@ -124,9 +124,10 @@ export default function Hero() {
     <>
       <Canvas
         style={{
-          width: "100vw",
+          width: "50vw",
           height: "100vh",
           position: "fixed",
+          overflow: "hidden",
         }}
         id="main-canvas"
         shadows

@@ -82,7 +82,7 @@ export default function Home() {
       </Head>
 
       <Scroll />
-      <Work />
+      {/* <Work /> */}
     </div>
   );
 }

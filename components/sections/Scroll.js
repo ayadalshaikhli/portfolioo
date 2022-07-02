@@ -11,7 +11,7 @@ import { TweenMax } from "gsap";
 import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { window } from "next";
-
+import tataroski from "../../public/tataroski.JPG";
 function Scroll() {
   const about = useRef();
   gsap.registerPlugin(ScrollTrigger);
@@ -43,11 +43,11 @@ function Scroll() {
 
   return (
     <Controller>
-      <Scene triggerHook="onLeave" duration="400%" pin={true}>
+      <Scene triggerHook="onLeave" duration="800%" pin={true}>
         <Timeline wrapper={<div id="pinContainer" />}>
           {/* <Hero /> */}
           <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-            <section className="panel text-center pt-10 text-white">
+            <section className="panel text-center pt-10 text-white z-0">
               <span className="text-7xl ">
                 Full-Stack Web Developer <br />
                 Ayad Al Shaikhli
@@ -55,7 +55,7 @@ function Scroll() {
             </section>
           </Tween>
           <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-            <section className="panel bg-black text-white border-l-2 border-white flex flex-col justify-between pt-10  uppercase">
+            <section className="panel bg-black text-white border-l-2 border-white flex flex-col justify-between pt-10  uppercase z-10">
               <ul className=" text-4xl w-full ">
                 <li className="border-b-2 flex pl-2">About</li>
                 <li className="border-b-2 flex pl-2">APPROACH</li>
@@ -72,7 +72,7 @@ function Scroll() {
           <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
             <section
               id="about"
-              className="about panel relative bg-black text-white  flex pt-10 "
+              className="about panel relative bg-black text-white  flex pt-10 z-10"
             >
               <div
                 ref={about}
@@ -102,7 +102,7 @@ function Scroll() {
             </section>
           </Tween>
           <Tween from={{ x: "100%" }} to={{ x: "4.4%" }}>
-            <section className="exp panel  bg-black text-white pt-10 z-30 flex overflow-hidden">
+            <section className="exp panel  bg-black text-white pt-10  flex overflow-hidden z-10">
               <div
                 ref={about}
                 className="bord h-full w-12  absolute text-6xl px-10 flex flex-col justify-between  uppercase "
@@ -239,7 +239,16 @@ function Scroll() {
             </section>
           </Tween>
           <Tween from={{ x: "100%" }} to={{ x: "8.7%" }}>
-            <section className="panel bg-black pt-10 z-40 text-white border-l-2 overflow-hidden">
+            <section className="panel bg-black pt-10  text-white border-l-2 flex  overflow-hidden z-10">
+              <div
+                ref={about}
+                className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase  bg-black"
+              >
+                <div className="mt-20 -rotate-90">6</div>
+                <div className="mb-20 -rotate-90 flex gap-4">
+                  <span>SELECTED</span> <span>PROJECTS</span>
+                </div>
+              </div>
               <h1 className="a absolute top-3/4 left-1/4 z-50 text-9xl overflow-hidden">
                 Teatro
               </h1>
@@ -249,38 +258,120 @@ function Scroll() {
             </section>
           </Tween>
           <Tween from={{ x: "100%" }} to={{ x: "0" }}>
-            <section className="panel bg-black z-50 pt-10 text-white">
-              <div className="a uppercase font-bold text-left pl-20 text-8xl">
-                Selected Projects
-              </div>
-              <div className="flex flex-row justify-around border-t-2 border-b-2 text-xl  p-3">
-                <div className="a">Project</div>
-                <div className="flex mr-96">
-                  <h1 className="pr-10">Year</h1>
-                  <h1>Discipline</h1>
-                </div>
-                <div className="">Explore</div>
-              </div>
-              <div className="don">
-                <div className="bg-red-600 bon-1  w-full  absolute bottom-44 h-96   z-50">
-                  h
-                </div>
-                <div className="bg-red-500 bon-2  w-full  absolute bottom-32 h-96   z-40">
-                  h
-                </div>
-                <div className="bg-red-400 bon w-full  absolute bottom-20 h-96  z-30">
-                  h
-                </div>
-                <div className="bg-red-300 bon w-full absolute bottom-10 h-96 z-20">
-                  h
-                </div>
-                <div className="bg-red-200 bon w-full absolute bottom-0 h-96 z-10">
-                  h
-                </div>
-                <div className="bg-red-100 bon w-full absolute bottom-0 h-96 z-0">
-                  h
-                </div>
-              </div>
+            <section className="z-50 panel bg-black">
+              <Tween from={{ y: "75%" }} to={{ y: "5%" }}>
+                <section className="panel text-center  text-white bg-black z-10">
+                  <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
+                    <div className="mt-20 -rotate-90">6</div>
+                    <div className="mb-20 -rotate-90 flex gap-4">
+                      <span>SELECTED</span> <span>PROJECTS</span>
+                    </div>
+                  </div>
+                  <div className="text-xl flex flex-col ">
+                    <div className="flex justify-around w-full border-b-2 p-2">
+                      <div>Tataroski</div>
+                      <div> 2020 Branding, E-commerce,Development</div>
+                      <div>
+                        <button>View Project</button>
+                      </div>
+                    </div>
+                    <div className="">
+                      <Image
+                        src={tataroski}
+                        alt={"hi"}
+                        layout="fixed"
+                        objectFit="fill"
+                        quality={100}
+                      />
+                    </div>
+                  </div>
+                </section>
+              </Tween>
+              <section />
+              <Tween from={{ y: "80%" }} to={{ y: "10%" }}>
+                <section className=" panel text-center  text-white bg-black z-10">
+                  <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
+                    <div className="mt-20 -rotate-90">6</div>
+                    <div className="mb-20 -rotate-90 flex gap-4">
+                      <span>SELECTED</span> <span>PROJECTS</span>
+                    </div>
+                  </div>
+                  <div className="text-xl flex flex-col ">
+                    <div className="flex justify-around w-full border-b-2 p-2">
+                      <div>Tataroski</div>
+                      <div> 2020 Branding, E-commerce,Development</div>
+                      <div>
+                        <button>View Project</button>
+                      </div>
+                    </div>
+                    <div className="">
+                      <Image
+                        src={tataroski}
+                        alt={"hi"}
+                        layout="fixed"
+                        objectFit="fill"
+                        quality={100}
+                      />
+                    </div>
+                  </div>
+                </section>
+              </Tween>
+              <Tween from={{ y: "85%" }} to={{ y: "15%" }}>
+                <section className=" panel text-center  text-white bg-black z-10">
+                  <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
+                    <div className="mt-20 -rotate-90">6</div>
+                    <div className="mb-20 -rotate-90 flex gap-4">
+                      <span>SELECTED</span> <span>PROJECTS</span>
+                    </div>
+                  </div>
+                  <div className="text-xl flex flex-col ">
+                    <div className="flex justify-around w-full border-b-2 p-2">
+                      <div>Tataroski</div>
+                      <div> 2020 Branding, E-commerce,Development</div>
+                      <div>
+                        <button>View Project</button>
+                      </div>
+                    </div>
+                    <div className="">
+                      <Image
+                        src={tataroski}
+                        alt={"hi"}
+                        layout="fixed"
+                        objectFit="fill"
+                        quality={100}
+                      />
+                    </div>
+                  </div>
+                </section>
+              </Tween>
+              <Tween from={{ y: "90%" }} to={{ y: "20%" }}>
+                <section className=" panel text-center  text-white bg-black z-10">
+                  <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
+                    <div className="mt-20 -rotate-90">6</div>
+                    <div className="mb-20 -rotate-90 flex gap-4">
+                      <span>SELECTED</span> <span>PROJECTS</span>
+                    </div>
+                  </div>
+                  <div className="text-xl flex flex-col ">
+                    <div className="flex justify-around w-full border-b-2 p-2">
+                      <div>Tataroski</div>
+                      <div> 2020 Branding, E-commerce,Development</div>
+                      <div>
+                        <button>View Project</button>
+                      </div>
+                    </div>
+                    <div className="">
+                      <Image
+                        src={tataroski}
+                        alt={"hi"}
+                        layout="fixed"
+                        objectFit="fill"
+                        quality={100}
+                      />
+                    </div>
+                  </div>
+                </section>
+              </Tween>
             </section>
           </Tween>
         </Timeline>

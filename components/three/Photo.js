@@ -96,7 +96,7 @@ export default function Photo() {
           width: "100vw",
           height: "100vh",
           position: "relative",
-          overflow: "hidden"
+          overflow: "hidden",
         }}
         id="main-canvas"
         
