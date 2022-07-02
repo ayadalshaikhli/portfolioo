@@ -12,7 +12,7 @@ import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { window } from "next";
 import tataroski from "../../public/tataroski.JPG";
-import { Balls } from "../three/balls";
+import { Balls } from "../three/Balls";
 function Scroll() {
   const about = useRef();
   const b = useRef();
@@ -29,7 +29,7 @@ function Scroll() {
     const mark = () => {
       gsap.to(b, {
         scale: 1.2,
-        duration: 0.5,
+        duration: 0.6,
         backgroundColor: "white",
         textColor: "black",
       });
