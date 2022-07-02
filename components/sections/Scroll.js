@@ -12,6 +12,7 @@ import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { window } from "next";
 import tataroski from "../../public/tataroski.JPG";
+import { Balls } from "../three/balls";
 function Scroll() {
   const about = useRef();
   const b = useRef();
@@ -59,6 +60,7 @@ function Scroll() {
       <Scene triggerHook="onLeave" duration="800%" pin={true}>
         <Timeline wrapper={<div id="pinContainer" />}>
           {/* <Hero /> */}
+          <Balls />
           <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
             <section className="panel text-center pt-10 text-white z-0">
               <span className="text-7xl ">
@@ -326,6 +328,7 @@ function Scroll() {
                         layout="fixed"
                         objectFit="fill"
                         quality={100}
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -386,6 +389,7 @@ function Scroll() {
                         layout="fixed"
                         objectFit="fill"
                         quality={100}
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -445,6 +449,7 @@ function Scroll() {
                         layout="fixed"
                         objectFit="fill"
                         quality={100}
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -504,6 +509,7 @@ function Scroll() {
                         layout="fixed"
                         objectFit="fill"
                         quality={100}
+                        loading="lazy"
                       />
                     </div>
                   </div>

@@ -10,6 +10,7 @@ import Nav from './Nav'
        
        body {
         margin: 0;
+        background: #000;
         overflow-x: auto;
         
       }

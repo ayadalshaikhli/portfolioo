@@ -17,7 +17,9 @@ import {
   useTexture
 } from "@react-three/drei";
 import * as THREE from "three";
-
+import { gsap, Expo } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { Physics, usePlane, useSphere } from "@react-three/cannon";
 import { EffectComposer, SSAO, Bloom } from "@react-three/postprocessing";
 import { LayerMaterial, Depth, Noise,  Fresnel } from "lamina";
@@ -58,6 +60,23 @@ const Model = ({ ...props }) => {
   boxTwo.current.rotation.y = Math.sin(state.clock.getElapsedTime() / 4) * Math.PI)
   )
 
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: ".wrap",
+
+      scrub: 5,
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+     
+        
+        group.current.position.x = 5 * Math.PI * self.progress;
+        // cup.current.rotation.z = -2 * Math.PI * self.progress;
+        // cup.current.position.y = -17 * self.progress;
+        // cup.current.position.y = -2 * self.progress;
+      },
+    });
+  }, [])
 
   // useFrame(() => {
     
@@ -97,22 +116,6 @@ const Model = ({ ...props }) => {
 useGLTF.preload('/cube.glb')
 
 
-const Par = () => {
-  const boxRef = useRef();
-
-  useFrame(() => {
-    boxRef.current.rotation.y += 0.01;
-  });
-
-  return (
-    <>
-     <mesh ref={boxRef} rotation-x={Math.PI * 0.25}  rotation-y={Math.PI * 0.25} rotation-z={Math.PI * 0.25}>
-      <boxBufferGeometry args={[1, 5, 1]} />
-      <meshStandardMaterial color={"gray"} />
-    </mesh>
-    </>
-  );
-}
 
 
 
@@ -124,10 +127,11 @@ export default function Hero() {
     <>
       <Canvas
         style={{
-          width: "50vw",
+          width: "100vw",
           height: "100vh",
           position: "fixed",
           overflow: "hidden",
+          zIndex: 1,
         }}
         id="main-canvas"
         shadows
