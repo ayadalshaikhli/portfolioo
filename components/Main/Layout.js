@@ -44,6 +44,7 @@ import Nav from './Nav'
         position: absolute;
         text-align: center;
       }
+      
 
       
       .panel.blue {

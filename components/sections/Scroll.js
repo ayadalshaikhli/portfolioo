@@ -14,14 +14,27 @@ import { window } from "next";
 import tataroski from "../../public/tataroski.JPG";
 function Scroll() {
   const about = useRef();
+  const b = useRef();
   gsap.registerPlugin(ScrollTrigger);
-  const handelScrollClickAbout = () => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: ".about",
-      options: { behavior: "smooth" },
-    });
-  };
+  // const handelScrollClickAbout = () => {
+
+  //   gsap.to(b, {
+  //     duration: 1,
+  //     scrollTo: ".about",
+  //     options: { behavior: "smooth" },
+  //   });
+  // };
+  useEffect(() => {
+    const mark = () => {
+      gsap.to(b, {
+        scale: 1.2,
+        duration: 0.5,
+        backgroundColor: "white",
+        textColor: "black",
+      });
+    };
+    mark();
+  }, []);
 
   ScrollTrigger.create({
     trigger: ".exp",
@@ -260,7 +273,30 @@ function Scroll() {
           <Tween delay={-4.0} from={{ x: "100%" }} to={{ x: "0" }}>
             <section className="z-50 panel bg-black">
               <Tween from={{ y: "75%" }} to={{ y: "5%" }}>
-                <section className="panel text-center  text-white bg-black z-10">
+                <section
+                  className="panel text-center text-white bg-black z-10"
+                  onMouseOver={() =>
+                    gsap.to(".btn", {
+                      color: "black",
+                      duration: 0.5,
+                      fontSize: "1.0rem",
+                      borderRadius: "50px",
+                      width: "100px",
+                      height: "50px",
+                    })
+                  }
+                  onMouseOut={() =>
+                    gsap.to(".btn", {
+                      scale: 1.0,
+                      color: "white",
+                      duration: 0.5,
+                      fontSize: "0.1rem",
+                      borderRadius: "100%",
+                      width: "32px",
+                      height: "32px",
+                    })
+                  }
+                >
                   <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
                     <div className="mt-20 -rotate-90">6</div>
                     <div className="mb-20 -rotate-90 flex gap-4">
@@ -268,11 +304,19 @@ function Scroll() {
                     </div>
                   </div>
                   <div className="text-xl flex flex-col ">
-                    <div className="flex justify-around w-full border-b-2 p-2">
+                    <div className="grid grid-cols-3 w-full border-b-2 p-2">
                       <div>Tataroski</div>
                       <div> 2020 Branding, E-commerce,Development</div>
                       <div>
-                        <button>View Project</button>
+                        <div
+                          style={{
+                            fontSize: "1rem",
+                            borderRadius: "100%",
+                          }}
+                          className=" btn relative bg-white ml-44  w-32 h-32  text-center"
+                        >
+                          <h1 className=" absolute top-0">View Project</h1>
+                        </div>
                       </div>
                     </div>
                     <div className="">
@@ -287,9 +331,32 @@ function Scroll() {
                   </div>
                 </section>
               </Tween>
-              <section />
+
               <Tween from={{ y: "80%" }} to={{ y: "10%" }}>
-                <section className=" panel text-center  text-white bg-black z-10">
+                <section
+                  className="panel text-center text-white bg-black z-10"
+                  onMouseOver={() =>
+                    gsap.to(".btn", {
+                      color: "black",
+                      duration: 0.5,
+                      fontSize: "1.0rem",
+                      borderRadius: "50px",
+                      width: "100px",
+                      height: "50px",
+                    })
+                  }
+                  onMouseOut={() =>
+                    gsap.to(".btn", {
+                      scale: 1.0,
+                      color: "white",
+                      duration: 0.5,
+                      fontSize: "0.1rem",
+                      borderRadius: "100%",
+                      width: "32px",
+                      height: "32px",
+                    })
+                  }
+                >
                   <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
                     <div className="mt-20 -rotate-90">6</div>
                     <div className="mb-20 -rotate-90 flex gap-4">
@@ -297,11 +364,19 @@ function Scroll() {
                     </div>
                   </div>
                   <div className="text-xl flex flex-col ">
-                    <div className="flex justify-around w-full border-b-2 p-2">
+                    <div className="grid grid-cols-3 w-full border-b-2 p-2">
                       <div>Tataroski</div>
                       <div> 2020 Branding, E-commerce,Development</div>
                       <div>
-                        <button>View Project</button>
+                        <div
+                          style={{
+                            fontSize: "1rem",
+                            borderRadius: "100%",
+                          }}
+                          className=" btn relative bg-white ml-44  w-32 h-32  text-center"
+                        >
+                          <h1 className=" absolute top-0">View Project</h1>
+                        </div>
                       </div>
                     </div>
                     <div className="">
@@ -317,7 +392,30 @@ function Scroll() {
                 </section>
               </Tween>
               <Tween from={{ y: "85%" }} to={{ y: "15%" }}>
-                <section className=" panel text-center  text-white bg-black z-10">
+                <section
+                  className="panel text-center text-white bg-black z-10"
+                  onMouseOver={() =>
+                    gsap.to(".btn", {
+                      color: "black",
+                      duration: 0.5,
+                      fontSize: "1.0rem",
+                      borderRadius: "50px",
+                      width: "100px",
+                      height: "50px",
+                    })
+                  }
+                  onMouseOut={() =>
+                    gsap.to(".btn", {
+                      scale: 1.0,
+                      color: "white",
+                      duration: 0.5,
+                      fontSize: "0.1rem",
+                      borderRadius: "100%",
+                      width: "32px",
+                      height: "32px",
+                    })
+                  }
+                >
                   <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
                     <div className="mt-20 -rotate-90">6</div>
                     <div className="mb-20 -rotate-90 flex gap-4">
@@ -325,11 +423,19 @@ function Scroll() {
                     </div>
                   </div>
                   <div className="text-xl flex flex-col ">
-                    <div className="flex justify-around w-full border-b-2 p-2">
+                    <div className="grid grid-cols-3 w-full border-b-2 p-2">
                       <div>Tataroski</div>
                       <div> 2020 Branding, E-commerce,Development</div>
                       <div>
-                        <button>View Project</button>
+                        <div
+                          style={{
+                            fontSize: "1rem",
+                            borderRadius: "100%",
+                          }}
+                          className=" btn relative bg-white ml-44  w-32 h-32  text-center"
+                        >
+                          <h1 className=" absolute top-0">View Project</h1>
+                        </div>
                       </div>
                     </div>
                     <div className="">
@@ -345,7 +451,30 @@ function Scroll() {
                 </section>
               </Tween>
               <Tween from={{ y: "90%" }} to={{ y: "20%" }}>
-                <section className=" panel text-center  text-white bg-black z-10">
+                <section
+                  className="panel text-center text-white bg-black z-10"
+                  onMouseOver={() =>
+                    gsap.to(".btn", {
+                      color: "black",
+                      duration: 0.5,
+                      fontSize: "1.0rem",
+                      borderRadius: "50px",
+                      width: "100px",
+                      height: "50px",
+                    })
+                  }
+                  onMouseOut={() =>
+                    gsap.to(".btn", {
+                      scale: 1.0,
+                      color: "white",
+                      duration: 0.5,
+                      fontSize: "0.1rem",
+                      borderRadius: "100%",
+                      width: "32px",
+                      height: "32px",
+                    })
+                  }
+                >
                   <div className="bord h-full w-12 absolute text-6xl z-50 px-10  flex flex-col justify-between  uppercase text-white  bg-black">
                     <div className="mt-20 -rotate-90">6</div>
                     <div className="mb-20 -rotate-90 flex gap-4">
@@ -353,11 +482,19 @@ function Scroll() {
                     </div>
                   </div>
                   <div className="text-xl flex flex-col ">
-                    <div className="flex justify-around w-full border-b-2 p-2">
+                    <div className="grid grid-cols-3 w-full border-b-2 p-2">
                       <div>Tataroski</div>
                       <div> 2020 Branding, E-commerce,Development</div>
                       <div>
-                        <button>View Project</button>
+                        <div
+                          style={{
+                            fontSize: "1rem",
+                            borderRadius: "100%",
+                          }}
+                          className=" btn relative bg-white ml-44 w-12 h-12 text-center"
+                        >
+                          <h1 className=" absolute top-0">View Project</h1>
+                        </div>
                       </div>
                     </div>
                     <div className="">
