@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SectionWipes2 from "../components/sections/SectionWipes2";
 import Scroll from "../components/sections/Scroll";
 import Work from "../components/sections/Work";
+import Intro from "../components/sections/Intro";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
