@@ -60,7 +60,7 @@ function Scroll() {
       <Scene triggerHook="onLeave" duration="800%" pin={true}>
         <Timeline wrapper={<div id="pinContainer" />}>
           {/* <Hero /> */}
-          <Balls />
+          {/* <Balls /> */}
           <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
             <section className="panel text-center pt-10 text-white z-0">
               <span className="text-7xl ">
@@ -273,7 +273,8 @@ function Scroll() {
             </section>
           </Tween>
           <Tween delay={-4.0} from={{ x: "100%" }} to={{ x: "0" }}>
-            <section className="z-50 panel bg-black">
+            <section className="z-50 panel bg-black
+             ">
               <Tween from={{ y: "75%" }} to={{ y: "5%" }}>
                 <section
                   className="panel text-center text-white bg-black z-10"

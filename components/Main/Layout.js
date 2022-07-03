@@ -1,4 +1,5 @@
  import React from 'react'
+import FirstPage from '../sections/FirstPage'
 import Intro from '../sections/Intro'
 import Hero from '../three/Hero'
 import Nav from './Nav'
@@ -78,6 +79,7 @@ import Nav from './Nav'
 `}
        </style>
        {/* <Intro /> */}
+      
          <Nav/>
          {/* <Hero/> */}
          <main className='bg-black'>{children}</main>
